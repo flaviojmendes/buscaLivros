@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_location"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@color/primary"
+    tools:context="es.flaviojmend.buscalivros.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/resultados_livro_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_dark"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/resultados_livro"
+            android:fontFamily="sans-serif"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/resultados_livro" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/list_livros"
+        android:layout_below="@id/resultados_livro_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+    </ListView>
+
+
+    <RelativeLayout
+        android:id="@+id/onde_esta_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_livros"
+        android:background="@color/primary_dark"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/onde_esta"
+            android:fontFamily="sans-serif"
+            android:textSize="22sp"
+            android:textColor="@android:color/white"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:text="Onde encontrar?" />
+
+    </RelativeLayout>
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        class="com.google.android.gms.maps.MapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:name="es.flaviojmend.buscalivros.BookResultActivity"
+        android:layout_below="@+id/onde_esta_layout" />
+
+</RelativeLayout>

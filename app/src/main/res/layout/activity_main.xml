@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@color/primary"
+    tools:context="es.flaviojmend.buscalivros.MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"/>
+
+
+    <RelativeLayout
+        android:id="@+id/lyt_busca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:background="@color/primary"
+        android:layout_marginTop="20dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/lbl_qual_livro"
+            android:fontFamily="sans-serif"
+            android:textSize="22sp"
+            android:textColor="@color/primary_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/qual_livro" />
+
+
+
+        <EditText
+            android:id="@+id/input_searched_term"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:inputType="text"
+            android:maxLines="1"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/lbl_qual_livro"
+            android:imeOptions="actionDone" />
+
+    </RelativeLayout>
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/btn_buscar"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/buscar"
+        android:layout_below="@id/lyt_busca"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        custom:pb_colorComplete="@color/primary_dark"
+        custom:pb_colorNormal="@color/primary_dark"
+        custom:pb_colorPressed="@color/accent"
+        custom:pb_colorProgress="@color/accent"
+        custom:pb_textComplete="@string/encontrado"
+        custom:pb_textProgress="@string/buscando"
+        custom:pb_textError="@string/erro"
+        custom:pb_colorError="@color/red_error" />
+
+
+
+    
+</RelativeLayout>

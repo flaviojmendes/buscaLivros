@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Busca Livros</string>
+    <string name="qual_livro">Qual livro está procurando?</string>
+    <string name="buscar">Buscar</string>
+    <string name="resultados_livro">Resultados para \'%1$s\'</string>
+    <string name="obrigatorio">Favor digitar o nome do livro a ser pesquisado.</string>
+    <string name="permissao_geolocalizacao">Você autoriza que o aplicativo acesse sua localização?</string>
+    <string name="buscando">Buscando..</string>
+    <string name="erro">Erro!</string>
+    <string name="encontrado">Encontrado!</string>
+    <string name="nenhum_resultado_encontrado">Nenhum resultado foi encontrado. Que tal uma nova busca?</string>
+</resources>
